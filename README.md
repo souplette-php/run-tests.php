@@ -13,3 +13,5 @@ composer require souplette/run-tests.php
 ```sh
 ./vendor/bin/run-tests.php --help
 ```
+
+You might also want to check the [PHPT format documentation](https://qa.php.net/phpt_details.php).
