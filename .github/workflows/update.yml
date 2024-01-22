@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
+
+name: Update from php-src
+permissions:
+  contents: write
+  pull-requests: write
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 * *"
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+      - name: Download upstream updates
+        run: scripts/update.sh
+      - name: Test it works
+        run: php bin/run-tests.php --help
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          title: Automated updates from php-src upstream
+          commit-message: "[bot] updates from upstream"
+          base: main
+          branch: php-src-updates
+          delete-branch: true

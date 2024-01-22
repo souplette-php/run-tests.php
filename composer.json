@@ -1,0 +1,23 @@
+{
+  "name": "souplette/run-tests.php",
+  "type": "project",
+  "license": "PHP-3.01",
+  "description": "The php-src test runner",
+  "authors": [
+    {
+      "name": "The PHP Group",
+      "homepage": "https://www.php.net",
+      "role": "Developer"
+    }
+  ],
+  "keywords": [
+    "phpt",
+    "test-runner"
+  ],
+  "bin": [
+    "bin/run-tests.php"
+  ],
+  "require": {
+    "php": ">=7.4"
+  }
+}
