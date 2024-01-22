@@ -1,0 +1,13 @@
+# Exclude build/test files from archive
+/.gitattributes     export-ignore
+/.gitignore         export-ignore
+/.github            export-ignore
+/.editorconfig      export-ignore
+/.idea              export-ignore
+/.vscode            export-ignore
+
+/scripts            export-ignore
+
+# Configure diff output for .php and .phar files.
+*.php diff=php
+*.phar -diff
