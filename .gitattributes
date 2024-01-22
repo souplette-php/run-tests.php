@@ -7,6 +7,7 @@
 /.vscode            export-ignore
 
 /scripts            export-ignore
+/tests              export-ignore
 
 # Configure diff output for .php and .phar files.
 *.php diff=php

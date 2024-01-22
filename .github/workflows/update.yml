@@ -20,7 +20,7 @@ jobs:
       - name: Download upstream updates
         run: scripts/update.sh
       - name: Test it works
-        run: php bin/run-tests.php --help
+        run: php bin/run-tests.php tests
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
